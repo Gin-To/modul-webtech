@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("/tag1/HelveticaNeue.woff2") format("woff2");
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 14vw);
+    grid-template-rows: repeat(16, 4vw);
+    background-color: black;
+    margin: 0;
+
+}
+
+.der {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    font-family: "HelveticaNeue";
+    font-size: 4vw;
+    line-height: 0;
+    color: #afaf97;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.film {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    line-height: 0;
+    margin: 0;
+    font-family: "HelveticaNeue";
+    font-size: 4vw;
+    color: #e6e1cd;
+    display: flex;
+    align-items: center;
+}
+
+.roterText {
+    grid-column-start: 4;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 17;
+    font-family: "HelveticaNeue";
+    color: #BE3431;
+    font-size: 1vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+
+
+

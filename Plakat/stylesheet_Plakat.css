@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("/tag1/HelveticaNeue.woff2") format("woff2");
+}
+
+#parent {
+    width: 1440px;
+    height: 900px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spalte_horizontal_1 {
+    width: 90%;
+    height: 50%;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+
+}
+
+.spalte_horizontal_2 {
+    width: 90%;
+    height: 35%;
+    background-color: rgb(55, 74, 247);
+    display: flex;
+    align-items: center;
+}
+
+.spalte_horizontal_3 {
+    width: 90%;
+    height: 15%;
+    background-color: blanchedalmond;
+    display: flex;
+    align-items: center;
+}
+
+.spalte_links {
+    width: 40%;
+    height: 80%;
+    background-color: blueviolet;
+
+}
+
+.spalte_rechts {
+    width: 60%;
+    height: 80%;
+    background-color: rgb(170, 221, 160);
+    margin-left: 2%;
+}
+
+.spalte_links_der {
+    width: 40%;
+    height: 80%;
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+
+}
+
+.spalte_rechts_film {
+    width: 60%;
+    height: 80%;
+    background-color: rgb(170, 221, 160);
+    display: flex;
+    align-items: center;
+}
+
+p {
+    font-family: "HelveticaNeue";
+    color: red;
+
+}
+
+h1 {
+    font-family: "HelveticaNeue";
+    font-size: 300px;
+
+
+}
+
+.farbe_dunkel {
+    color: #afaf97;
+}
+
+.farbe_hell {
+    color: #e6e1cd;
+}

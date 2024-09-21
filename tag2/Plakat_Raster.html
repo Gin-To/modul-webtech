@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: "HelveticaNeue";
+            src: url("/tag1/HelveticaNeue.woff2") format("woff2");
+        }
+
+        #parent {
+            width: 1700px;
+            height: 1080px;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spalte_horizontal_1 {
+            width: 90%;
+            height: 50%;
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .spalte_horizontal_2 {
+            width: 90%;
+            height: 30%;
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .spalte_horizontal_3 {
+            width: 90%;
+            height: 30%;
+            background-color: blanchedalmond;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .spalte_links {
+            width: 40%;
+            height: 80%;
+            background-color: blueviolet;
+        }
+
+        .spalte_rechts {
+            width: 60%;
+            height: 80%;
+            background-color: rgb(170, 221, 160)
+        }
+
+        p {
+            font-family: "HelveticaNeue";
+            color: red;
+
+        }
+        h1 {
+            font-family: "HelveticaNeue";
+            font-size: 60px;
+            display: flex;
+            align-items: flex-end;
+
+        }
+        .farbe_dunkel {
+            color: #afaf97;
+        }
+
+        .farbe_hell {
+            color: #e6e1cd;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div id="parent">
+        <div class="spalte_horizontal_1">
+            <div class="spalte_links"></div>
+            <div class="spalte_rechts">
+                <p> Kunstgewerbemuseum Zürich<br>
+                    Ausstellung</p>
+            </div>
+
+        </div>
+        <div class="spalte_horizontal_2">
+            <div class="spalte_links farbe_hell">
+                <h1>der</h1>
+            </div>
+            <div class="spalte_rechts farbe_dunkel">
+                <h1>Film</h1>
+            </div>
+        </div>
+        <div class="spalte_horizontal_3">
+            <div class="spalte_links"></div>
+            <div class="spalte_rechts">
+                <p> 10. Januar bis 30. April 1960</p>
+                <p> Offen: Montag 14-18, 20-22 <br>
+                    Dienstag-Freitag 10-12, 14-28, 20-22 <br>
+                    Samstag-Sonntag 10-12, 14-17</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
