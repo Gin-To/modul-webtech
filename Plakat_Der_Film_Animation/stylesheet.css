@@ -18,6 +18,7 @@ p {
     background-color: black;
     width: 100vw;
     height: 100vh;
+    overflow: hidden;
 }
 
 /* Grid bei der Reihe wo "der" und "Film" steht noch eine fixe Anzahl Pixel zu geben,
@@ -25,31 +26,46 @@ p {
  für animation/interaktion dann roter text scrollbar machen
  Statisch wirkt es noch langweilig, hoffe mit animation und bewegung/Interaktion bringt es spannung rein */
 
-.der {
+
+
+ .der {
     grid-column: 1 / 8;
     grid-row: 12 / 14;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     font-size: 4vw;
     line-height: 0;
     color: #afaf97;
-    background-color: black;
     display: flex;
     align-items: center;
-    overflow: hidden;
     white-space: nowrap;
+    animation-name: der;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    
 }
+
 
 .film {
     grid-column: 1 / 8;
     grid-row: 12 / 14;
     line-height: 0;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     font-size: 4vw;
     color: #e6e1cd;
     display: flex;
     align-items: center;
-    overflow: hidden;
     white-space: nowrap;
+    animation-name: film;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.balken {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    background-color: black;
 }
 
 .roterText {
@@ -57,11 +73,51 @@ p {
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 17;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     color: #BE3431;
     font-size: 95%;
     line-height: 155%;
-    overflow: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* bottom: -100%;
+    animation-name: Abspann;
+    animation-duration: 15s; */
+
+}
+
+
+
+
+
+
+/* ---Animation--- */
+
+@keyframes Abspann {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+@keyframes der {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes film {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 
@@ -97,6 +153,10 @@ mehr auf dies geachtet als zum Beispiel fontgrössen, beim handy dunkt es mich n
         font-size: 120%;
 
     }
+    .balken {
+        grid-column: 1 / 4;
+        grid-row: 10 / 12;
+    }
 }
 
 @media (max-width: 540px) {
@@ -127,6 +187,11 @@ mehr auf dies geachtet als zum Beispiel fontgrössen, beim handy dunkt es mich n
         font-size: 70%;
         line-height: 160%;
 
+    }
+
+    .balken {
+        grid-column: 1 / 8;
+        grid-row: 7 / 8;
     }
 
 }

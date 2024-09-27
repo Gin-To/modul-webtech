@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .group{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-self: center;
+        }
+
+        .child {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            mix-blend-mode: multiply;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+            font-size: 500px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .links {
+            color: aqua;
+            animation-name: buchstabelinks;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            
+        }
+
+        .rechts {
+            color: rgb(249, 255, 69);
+            animation-name: buchstaberechts;
+            animation-duration: 2s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            
+        }
+
+        .mitte {
+            color: blueviolet;
+        }
+
+
+        /* Animation */
+
+        @keyframes buchstabelinks {
+            0%{
+                transform: translate(0,0);
+            }
+
+            50%{
+                transform: translate(-200px,0) rotate(-45deg);
+            }
+
+            100%{
+                transform: translate(0,0);
+            }   
+        }
+
+        @keyframes buchstaberechts {
+            0%{
+                transform: translate(0,0);
+            }
+
+            50%{
+                transform: translate(200px,0) rotate(45deg);
+            }
+
+            100%{
+                transform: translate(0,0);
+            }
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="group">
+        <div class="child links">
+            S
+        </div>
+        <div class="child mitte">
+            S
+        </div>
+        <div class="child rechts">
+            S
+        </div>
+    </div>
+
+</body>
+
+</html>

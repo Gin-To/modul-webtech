@@ -1,6 +1,6 @@
 @font-face {
     font-family: "HelveticaNeue";
-    src: url("/tag4/HelveticaNeue.woff2") format("woff2");
+    src: url("HelveticaNeue.woff2") format("woff2");
 }
 
 body {
@@ -28,7 +28,7 @@ p {
 .der {
     grid-column: 1 / 8;
     grid-row: 12 / 14;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     font-size: 4vw;
     line-height: 0;
     color: #afaf97;
@@ -43,7 +43,7 @@ p {
     grid-column: 1 / 8;
     grid-row: 12 / 14;
     line-height: 0;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     font-size: 4vw;
     color: #e6e1cd;
     display: flex;
@@ -57,7 +57,7 @@ p {
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 17;
-    font-family: "HelveticaNeue";
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     color: #BE3431;
     font-size: 95%;
     line-height: 155%;
