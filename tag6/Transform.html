@@ -36,9 +36,15 @@
             background-color: rgba(0, 0, 255, 0.5);
         }
 
+        .verschieben {
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
 
-        .Verschieben {
+        .group:hover .verschieben {
             transform: translate(100px, 200px);
+            
         }
 
         .rotieren {
@@ -55,12 +61,16 @@
             transform: skew(20deg, 20deg);
         }
 
-
         /* Wenn man mehrere transforms in einem haben möchte schreibt man es aneinander, 
         so wie hier */
         .kombination {
             transform: scale(0.8) rotate(45deg);
         }
+
+
+
+        
+        
     </style>
 
 </head>
@@ -71,7 +81,7 @@
         <div class="group">
             <div class="not_transformed">
             </div>
-            <div class="transformed Verschieben">
+            <div class="transformed verschieben">
             </div>
         </div>
     </section>
