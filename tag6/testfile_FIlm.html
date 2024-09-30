@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nahtloser Endloslauf</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: black;
+        }
+
+        .ticker-wrapper {
+            width: 100vw; /* Vollbildweite */
+            overflow: hidden; /* Verstecke alles, was außerhalb des Containers liegt */
+            white-space: nowrap;
+        }
+
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: scroll-left 10s linear infinite; /* 10 Sekunden für eine komplette Schleife */
+        }
+
+        .ticker span {
+            display: inline-block;
+            padding-right: 50px; /* Abstand zwischen den Textwiederholungen */
+            color: #e6e1cd;
+            font-size: 4vw;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(0); /* Ausgangsposition */
+            }
+            100% {
+                transform: translateX(-100%); /* Bewegung nach links */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="ticker-wrapper">
+        <div class="ticker">
+            <!-- Text wird dupliziert, um einen nahtlosen Übergang zu schaffen -->
+            <span>Film</span><span>Film</span><span>Film</span><span>Film</span><span>Film</span>
+        </div>
+    </div>
+
+</body>
+</html>

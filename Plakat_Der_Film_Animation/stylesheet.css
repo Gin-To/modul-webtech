@@ -39,7 +39,7 @@ p {
     align-items: center;
     white-space: nowrap;
     animation-name: der;
-    animation-duration: 20s;
+    animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     
@@ -60,6 +60,7 @@ p {
     animation-duration: 25s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+    
 }
 
 .balken {
@@ -78,10 +79,12 @@ p {
     font-size: 95%;
     line-height: 155%;
     overflow-y: scroll;
-    overflow-x: hidden;
-    /* bottom: -100%;
+    overflow-x: hidden; 
+    bottom: -100%;
     animation-name: Abspann;
-    animation-duration: 15s; */
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 
 }
 
@@ -98,7 +101,7 @@ p {
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-300%);
     }
 }
 @keyframes der {
@@ -107,18 +110,19 @@ p {
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 }
 @keyframes film {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(-150%);
     }
 
     100% {
         transform: translateX(100%);
     }
 }
+
 
 
 

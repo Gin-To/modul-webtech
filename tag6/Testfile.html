@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Animation</title>
+    <style>
+        @font-face {
+            font-family: "HelveticaNeue";
+            src: url("/tag4/HelveticaNeue.woff2") format("woff2");
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+            background-color: black;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .film-wrapper {
+            grid-column: 1 / 8;
+            grid-row: 12 / 14;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* Versteckt den Überlauf */
+        }
+
+        .film {
+            display: inline-block;
+            white-space: nowrap; /* Keine Umbrüche, alles in einer Zeile */
+            animation: ticker 15s linear infinite;
+            font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+            font-size: 4vw;
+            color: #e6e1cd;
+        }
+
+        .film span {
+            margin-right: 100px; /* Abstand zwischen den Wörtern */
+        }
+
+        /* Animation für den Ticker */
+        @keyframes ticker {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .balken {
+            grid-column: 1 / 8;
+            grid-row: 12 / 14;
+            background-color: black;
+        }
+
+        .roterText {
+            grid-column-start: 4;
+            grid-column-end: 6;
+            grid-row-start: 2;
+            grid-row-end: 17;
+            font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+            color: #BE3431;
+            font-size: 95%;
+            line-height: 155%;
+            bottom: -100%;
+            animation-name: Abspann;
+            animation-duration: 30s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+        }
+
+        /* ---Animation für den Abspann--- */
+        @keyframes Abspann {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(-250%);
+            }
+        }
+
+        /*---media queries---*/
+        @media (max-width: 1024px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(14, 1fr);
+            }
+
+            .film-wrapper {
+                grid-column: 1 / 4;
+                grid-row: 10 / 12;
+            }
+
+            .roterText {
+                grid-column: 2 / 4;
+                grid-row: 2 / 15;
+                font-size: 120%;
+            }
+
+            .balken {
+                grid-column: 1 / 4;
+                grid-row: 10 / 12;
+            }
+        }
+
+        @media (max-width: 540px) {
+            .grid {
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(9, 1fr);
+            }
+
+            .film-wrapper {
+                grid-column: 1 / 8;
+                grid-row: 7 / 8;
+            }
+
+            .roterText {
+                grid-column: 3 / 7;
+                grid-row: 2 / 10;
+                font-size: 70%;
+                line-height: 160%;
+            }
+
+            .balken {
+                grid-column: 1 / 8;
+                grid-row: 7 / 8;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="film-wrapper">
+            <div class="film">
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+                <span>Film</span>
+            </div>
+        </div>
+
+        <div class="balken"></div>
+
+        <div class="roterText">
+            <!-- Hier kannst du den roten Text hinzufügen -->
+        </div>
+    </div>
+
+</body>
+</html>
