@@ -14,25 +14,22 @@ p {
 .grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(10, 1fr) 250px repeat(3, 1fr);
     background-color: black;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
 
-/* Grid bei der Reihe wo "der" und "Film" steht noch eine fixe Anzahl Pixel zu geben,
- dass diese sich nicht proportional mit dem Grid skalieren 
- für animation/interaktion dann roter text scrollbar machen
- Statisch wirkt es noch langweilig, hoffe mit animation und bewegung/Interaktion bringt es spannung rein */
+/* Grid bei der Reihe wo "der" und "Film" steht fixe Anzahl gegeben */
 
 
 
  .der {
     grid-column: 1 / 8;
-    grid-row: 12 / 14;
+    grid-row: 11 / 12;
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
-    font-size: 4vw;
+    font-size: 90px;
     line-height: 0;
     color: #afaf97;
     display: flex;
@@ -48,10 +45,10 @@ p {
 
 .film {
     grid-column: 1 / 8;
-    grid-row: 12 / 14;
+    grid-row: 11 / 12;
     line-height: 0;
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
-    font-size: 4vw;
+    font-size: 90px;
     color: #e6e1cd;
     display: flex;
     align-items: center;
@@ -63,11 +60,6 @@ p {
     
 }
 
-/* .balken {
-    grid-column: 1 / 8;
-    grid-row: 12 / 14;
-    background-color: black;
-} */
 
 .roterText {
     grid-column-start: 4;
@@ -76,21 +68,23 @@ p {
     grid-row-end: 17;
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     color: #BE3431;
-    font-size: 95%;
+    font-size: 110%;
     line-height: 155%;
     overflow-y: scroll;
     overflow-x: hidden; 
 }
 
 svg {
-    width: 10%;
+    width: 40px;
     margin-left: 25%;
 }
 
 
 
 
-
+/* Animation der/Film macht nicht genau das was ich möchte,
+es sollte sich endlos wiederholen ohne dass der Text irgendwann aufhört,
+sobald er links rausgeht sollte er gleichzeitig rechts wieder reinkommen und vice versa */
 
 /* ---Animation--- */
 
@@ -105,62 +99,91 @@ svg {
 }
 @keyframes der {
     0% {
-        transform: translateX(100%);
+        transform: translateX(110%);
     }
 
     100% {
-        transform: translateX(-150%);
+        transform: translateX(-230%);
     }
 }
 @keyframes film {
     0% {
-        transform: translateX(-150%);
+        transform: translateX(-230%);
     }
 
     100% {
         transform: translateX(100%);
     }
+
 }
+
 
 
 
 
 /*---media queries---*/
-/* Responsive auf Ipad und Iphone display sollte funktionieren, 
-mehr auf dies geachtet als zum Beispiel fontgrössen, beim handy dunkt es mich noch eine zu kleine schrift beim roten Text */
 @media (max-width: 1024px) {
     p {
         margin-bottom: 8%;
     }
 
     .grid {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(14, 1fr);
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(10, 1fr) 100px repeat(3, 1fr);
     }
 
     .der {
         grid-column: 1 / 4;
         grid-row: 10 / 12;
-        font-size: 7vw;
+        font-size: 90px;
+        animation-duration: 25s;
     }
 
     .film {
         grid-column: 1 / 4;
         grid-row: 10 / 12;
-        font-size: 7vw;
+        font-size: 90px;
+        animation-duration: 25s;
     }
 
     .roterText {
-        grid-column: 2 / 4;
+        grid-column: 3 / 6;
         grid-row: 2 / 15;
         font-size: 120%;
 
     }
-    .balken {
-        grid-column: 1 / 4;
-        grid-row: 10 / 12;
+
+    svg {
+        width: 10%;
+        margin-left: 30%;
     }
+
+     @keyframes der {
+        0% {
+            transform: translateX(200%);
+        }
+    
+        100% {
+            transform: translateX(-700%);
+        }
+    }
+    @keyframes film {
+        0% {
+            transform: translateX(-650%);
+        }
+    
+        100% {
+            transform: translateX(250%);
+        }
+    
+    } 
 }
+
+
+
+
+
+
 
 @media (max-width: 540px) {
     p {
@@ -168,26 +191,28 @@ mehr auf dies geachtet als zum Beispiel fontgrössen, beim handy dunkt es mich n
     }
 
     .grid {
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(9, 1fr);
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(6, 1fr) 150px repeat(2, 1fr);
     }
 
     .der {
         grid-column: 1 / 8;
         grid-row: 7 / 8;
-        font-size: 11vw;
+        font-size: 90px;
+        animation-duration: 30s;
     }
 
     .film {
         grid-column: 1 / 8;
         grid-row: 7 / 8;
-        font-size: 11vw;
+        font-size: 90px;
+        animation-duration: 30s;
     }
 
     .roterText {
-        grid-column: 3 / 7;
+        grid-column: 3 / 9;
         grid-row: 2 / 10;
-        font-size: 70%;
+        font-size: 80%;
         line-height: 160%;
 
     }
@@ -196,5 +221,30 @@ mehr auf dies geachtet als zum Beispiel fontgrössen, beim handy dunkt es mich n
         grid-column: 1 / 8;
         grid-row: 7 / 8;
     }
+
+    svg {
+        width: 40px;
+        margin-left: 35%;
+    }
+
+    @keyframes der {
+        0% {
+            transform: translateX(200%);
+        }
+    
+        100% {
+            transform: translateX(-1100%);
+        }
+    }
+    @keyframes film {
+        0% {
+            transform: translateX(-1100%);
+        }
+    
+        100% {
+            transform: translateX(250%);
+        }
+    
+    } 
 
 }
