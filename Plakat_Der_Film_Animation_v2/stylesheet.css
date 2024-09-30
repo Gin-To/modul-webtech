@@ -108,7 +108,7 @@ sobald er links rausgeht sollte er gleichzeitig rechts wieder reinkommen und vic
 }
 @keyframes film {
     0% {
-        transform: translateX(-230%);
+        transform: translateX(-200%);
     }
 
     100% {
