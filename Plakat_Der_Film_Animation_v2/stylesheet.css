@@ -217,10 +217,6 @@ sobald er links rausgeht sollte er gleichzeitig rechts wieder reinkommen und vic
 
     }
 
-    .balken {
-        grid-column: 1 / 8;
-        grid-row: 7 / 8;
-    }
 
     svg {
         width: 40px;
