@@ -36,7 +36,7 @@ p {
     align-items: center;
     white-space: nowrap;
     animation-name: der;
-    animation-duration: 25s;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     
@@ -54,7 +54,7 @@ p {
     align-items: center;
     white-space: nowrap;
     animation-name: film;
-    animation-duration: 25s;
+    animation-duration: 35s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     

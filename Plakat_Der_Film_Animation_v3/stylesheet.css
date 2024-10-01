@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "HelveticaNeue";
+    src: url("HelveticaNeue.woff2") format("woff2");
+}
+
+body {
+    margin: 0;
+}
+
+p {
+    margin-bottom: 10%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Grid bei der Reihe wo "der" und "Film" steht noch eine fixe Anzahl Pixel zu geben,
+ dass diese sich nicht proportional mit dem Grid skalieren 
+ für animation/interaktion dann roter text scrollbar machen
+ Statisch wirkt es noch langweilig, hoffe mit animation und bewegung/Interaktion bringt es spannung rein */
+
+ 
+
+ .der {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    line-height: 0;
+    color: #afaf97;
+    margin: .5vw; 
+}
+
+
+ .film {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    line-height: 0;
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+    font-size: 4vw;
+    color: #e6e1cd;
+    margin: .5vw;
+    
+} 
+
+.carousel-wrapper {
+    grid-column: 1 / 8;
+    grid-row: 12 / 14;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .carousel-der {
+    display: flex;
+    width: calc(200%); /* Carousel is twice the width (to accommodate both original and duplicated content) */
+    animation: scroll 40s linear infinite;
+  }
+
+  .carousel-film {
+    display: flex;
+    width: calc(200%); /* Carousel is twice the width (to accommodate both original and duplicated content) */
+    animation: scroll 40s linear infinite;
+  }
+
+
+
+.roterText {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 17;
+    font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
+    color: #BE3431;
+    font-size: 120%;
+    line-height: 155%;
+    bottom: -100%;
+    animation-name: Abspann;
+    animation-duration: 65s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+
+}
+
+
+
+
+
+
+/* ---Animation--- */
+
+@keyframes Abspann {
+    0% {
+        transform: translateY(120%);
+    }
+
+    100% {
+        transform: translateY(-400%);
+    }
+}
+@keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+@keyframes film {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+
+
+
+/*---media queries---*/
+
+@media (max-width: 1024px) {
+    p {
+        margin-bottom: 8%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(14, 1fr);
+    }
+
+    .der {
+        grid-column: 1 / 4;
+        grid-row: 10 / 12;
+        font-size: 8vw;
+        animation-duration: 30s;
+    }
+
+    .film {
+        grid-column: 1 / 4;
+        grid-row: 10 / 12;
+        font-size: 8vw;
+        animation-duration: 30s;
+    }
+
+    .roterText {
+        grid-column: 3 / 6;
+        grid-row: 2 / 15;
+        font-size: 130%;
+        animation-duration: 55s;
+
+    }
+
+    @keyframes Abspann {
+        0% {
+            transform: translateY(100%);
+        }
+    
+        100% {
+            transform: translateY(-300%);
+        }
+    }
+    @keyframes der {
+        0% {
+            transform: translateX(200%);
+        }
+    
+        100% {
+            transform: translateX(-650%);
+        }
+    }
+    @keyframes film {
+        0% {
+            transform: translateX(-600%);
+        }
+    
+        100% {
+            transform: translateX(300%);
+        }
+    }
+}
+
+
+
+
+
+
+@media (max-width: 540px) {
+    p {
+        margin-bottom: 15%;
+    }
+
+    .grid {
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(9, 1fr);
+    }
+
+    .der {
+        grid-column: 1 / 8;
+        grid-row: 7 / 8;
+        font-size: 11vw;
+        animation-duration: 30s;
+    }
+
+    .film {
+        grid-column: 1 / 8;
+        grid-row: 7 / 8;
+        font-size: 11vw;
+        animation-duration: 30s;
+    }
+
+    .roterText {
+        grid-column: 3 / 9;
+        grid-row: 2 / 10;
+        font-size: 80%;
+        line-height: 165%;
+        animation-duration: 60s;
+
+    }
+
+    @keyframes Abspann {
+        0% {
+            transform: translateY(100%);
+        }
+    
+        100% {
+            transform: translateY(-350%);
+        }
+    }
+    @keyframes der {
+        0% {
+            transform: translateX(150%);
+        }
+    
+        100% {
+            transform: translateX(-550%);
+        }
+    }
+    @keyframes film {
+        0% {
+            transform: translateX(-550%);
+        }
+    
+        100% {
+            transform: translateX(200%);
+        }
+    }
+
+
+
+}
