@@ -88,15 +88,7 @@ sobald er links rausgeht sollte er gleichzeitig rechts wieder reinkommen und vic
 
 /* ---Animation--- */
 
-@keyframes Abspann {
-    0% {
-        transform: translateY(100%);
-    }
 
-    100% {
-        transform: translateY(-300%);
-    }
-}
 @keyframes der {
     0% {
         transform: translateX(110%);
