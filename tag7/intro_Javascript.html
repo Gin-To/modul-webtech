@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #element {
+            position: absolute; 
+            top: 200px;
+            left: 0px;
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .random {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            
+        }
+
+        @keyframes anim {
+            0% {
+                box-shadow: 0px 0px 8px 8px #e803ba;
+            }
+            25% {
+                box-shadow: 0px 0px 0px 8px #e803ba, 0px 0px 8px 16px #e8035b;
+                background-color: #03e8ba;
+            }
+            50% {
+                box-shadow: 0px 0px 0px 8px #e803ba, 0px 0px 0px 16px #e84803, 0px 0px 8px 24px #e85f03;
+                background-color: #038ce8;
+            }
+            75% {
+                box-shadow: 0px 0px 0px 8px #e803ba, 0px 0px 0px 16px #e84803, 0px 0px 0px 24px #e85f03, 0px 0px 8px 32px #e8a303;
+            }
+        }
+#kreis2 {
+            border-radius: 50%;
+            width: 400px;
+            height: 400px;
+            background-color: #000506;
+            animation-name: anim;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-play-state: paused;            
+        }
+
+        body {
+         height: 200vh;
+         width: 100vw;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+        }
+
+      
+        
+
+
+    </style>
+
+</head>
+<body>
+
+    <script>
+        // alert('hallo seite geladen');
+    </script>
+
+    
+
+    <div id="element"></div>
+
+    <div id="kreis2"></div>
+
+
+    <button class="specialbutton" onclick="buttonPressed()">Click mich!</button>
+
+    <button class="specialbutton" onclick="neuesElement()">Erzeuge Element!</button>
+
+    <button class="specialbutton" onclick="starteAnimation()">Animiere den Kreis</button>
+
+    <button id="toggleButton">Animation starten</button>
+
+
+
+
+
+    <script src="main.js"></script>
+
+    
+</body>
+</html>

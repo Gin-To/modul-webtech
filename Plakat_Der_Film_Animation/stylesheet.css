@@ -1,6 +1,6 @@
 @font-face {
     font-family: "HelveticaNeue";
-    src: url("/tag4/HelveticaNeue.woff2") format("woff2");
+    src: url("HelveticaNeue.woff2") format("woff2");
 }
 
 body {
@@ -20,13 +20,6 @@ p {
     height: 100vh;
     overflow: hidden;
 }
-
-/* Grid bei der Reihe wo "der" und "Film" steht noch eine fixe Anzahl Pixel zu geben,
- dass diese sich nicht proportional mit dem Grid skalieren 
- für animation/interaktion dann roter text scrollbar machen
- Statisch wirkt es noch langweilig, hoffe mit animation und bewegung/Interaktion bringt es spannung rein */
-
-
 
  .der {
     grid-column: 1 / 8;
@@ -151,7 +144,7 @@ p {
         grid-column: 3 / 6;
         grid-row: 2 / 15;
         font-size: 130%;
-        animation-duration: 55s;
+        animation-duration: 60s;
 
     }
 
@@ -218,7 +211,7 @@ p {
         grid-row: 2 / 10;
         font-size: 80%;
         line-height: 165%;
-        animation-duration: 60s;
+        animation-duration: 65s;
 
     }
 
