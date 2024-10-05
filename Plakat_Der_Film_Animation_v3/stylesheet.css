@@ -32,10 +32,12 @@ p {
     grid-column: 1 / 8;
     grid-row: 12 / 14;
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
-    font-size: 4vw;
+    font-size: 144px;
     line-height: 0;
     color: #afaf97;
-    margin: .5vw; 
+    /*margin: .5vw; */
+    flex: 1 0 5%;
+    padding: .5vw;
 }
 
 
@@ -56,14 +58,14 @@ p {
     display: flex;
     align-items: center;
     white-space: nowrap;
-    width: 100%;
+    width: 100vw;
     overflow: hidden;
   }
 
   .carousel-der {
     display: flex;
     width: calc(200%); /* Carousel is twice the width (to accommodate both original and duplicated content) */
-    animation: scroll 40s linear infinite;
+    animation: scroll 10s linear infinite;
   }
 
   .carousel-film {
@@ -81,7 +83,7 @@ p {
     grid-row-end: 17;
     font-family: "HelveticaNeue", Arial, Helvetica, sans-serif;
     color: #BE3431;
-    font-size: 120%;
+    font-size: 21px;
     line-height: 155%;
     bottom: -100%;
     animation-name: Abspann;

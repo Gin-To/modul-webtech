@@ -1,6 +1,6 @@
 @font-face {
     font-family: "HelveticaNeue";
-    src: url("/tag4/HelveticaNeue.woff2") format("woff2");
+    src: url("HelveticaNeue.woff2") format("woff2");
 }
 
 body {
